@@ -68,6 +68,7 @@
         :root {
             --bg-dark: #0a0510; /* Deep, rich violet-black */
             --bg-light: #ffffff; /* Pure white */
+            --bg-offwhite: #fcfcfc; /* Very light grey for contrast */
             --accent-gold: #c5a059; /* Muted champagne gold */
             --text-dark: #1a1a1a;
             --text-light: #f5f5f5;
@@ -96,7 +97,7 @@
 
         /* Editorial Utilities */
         .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 40px; }
-        .section-padding { padding: 160px 0; }
+        .section-padding { padding: 140px 0; }
         .text-center { text-align: center; }
         
         .section-title { font-size: 3rem; margin-bottom: 20px; letter-spacing: 2px; }
@@ -147,7 +148,7 @@
         }
         header.scrolled .logo img { height: 65px; }
         
-        .nav-links { display: flex; align-items: center; gap: 45px; }
+        .nav-links { display: flex; align-items: center; gap: 35px; }
         .nav-links a { 
             font-size: 0.75rem; 
             text-transform: uppercase; 
@@ -222,13 +223,13 @@
         .gallery { background-color: var(--bg-light); }
         .gallery-grid { 
             display: grid; 
-            grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+            grid-template-columns: repeat(4, 1fr); 
             gap: 20px; 
             margin-top: 70px; 
         }
         .gallery-item { 
             position: relative; 
-            aspect-ratio: 1 / 1; /* Forces perfect squares */
+            aspect-ratio: 1 / 1; 
             overflow: hidden; 
             background-color: #f4f4f4;
             cursor: pointer;
@@ -236,7 +237,7 @@
         .gallery-item img { 
             width: 100%; 
             height: 100%; 
-            object-fit: cover; /* Ensures images fill the square without stretching */
+            object-fit: cover; 
             display: block;
             transition: transform 0.8s var(--ease); 
         }
@@ -252,11 +253,21 @@
         .review-text { font-family: var(--font-heading); font-size: 1.5rem; color: var(--bg-dark); line-height: 1.6; margin-bottom: 30px; font-style: italic; }
         .review-author { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 500; color: var(--accent-gold); }
 
-        /* Booking - Concierge Style */
-        .booking { background-color: var(--bg-light); }
-        .booking-container { max-width: 1000px; margin: 0 auto; margin-top: 70px; }
-        .booking-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 50px; }
-        .form-group { position: relative; }
+        /* --- NEW: ENQUIRY SECTION --- */
+        .enquiry { background-color: var(--bg-offwhite); border-top: 1px solid #eee; }
+        .enquiry-wrapper { 
+            display: grid; 
+            grid-template-columns: 1fr 1.2fr; 
+            gap: 100px; 
+            align-items: center; 
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .enquiry-text h2 { font-size: 3.2rem; margin-bottom: 30px; color: var(--bg-dark); }
+        .enquiry-text p { color: var(--text-muted); font-size: 1.05rem; line-height: 2; margin-bottom: 20px; }
+        
+        /* Shared Form Styles */
+        .form-group { position: relative; margin-bottom: 35px; }
         .form-group label { 
             display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; 
             color: var(--text-muted); margin-bottom: 15px; font-weight: 500;
@@ -268,6 +279,20 @@
         }
         .form-control:focus { outline: none; border-bottom-color: var(--accent-gold); }
         .form-control::placeholder { color: #bbb; font-size: 0.95rem; }
+        textarea.form-control { resize: none; }
+        
+        .btn-enquiry { 
+            width: 100%; background-color: transparent; color: var(--accent-gold); border: 1px solid var(--accent-gold); 
+            padding: 20px; font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.2em; 
+            cursor: pointer; transition: all 0.5s var(--ease); display: flex; align-items: center; justify-content: center; gap: 15px;
+        }
+        .btn-enquiry:hover { background-color: var(--accent-gold); color: var(--bg-dark); }
+
+        /* Booking - Concierge Style */
+        .booking { background-color: var(--bg-light); }
+        .booking-container { max-width: 1000px; margin: 0 auto; margin-top: 70px; }
+        .booking-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 50px; }
+        
         .btn-submit { 
             width: 100%; background-color: var(--bg-dark); color: #fff; border: 1px solid var(--bg-dark); 
             padding: 25px; font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.2em; 
@@ -286,7 +311,7 @@
         .social-links a { width: auto; height: auto; background: none; color: #fff; font-size: 1.4rem; }
         .social-links a:hover { color: var(--accent-gold); transform: translateY(-3px); }
         
-        /* --- FOOTER BOTTOM (Built.png Left, Copyright Right) --- */
+        /* Footer Bottom Bar */
         .footer-bottom { 
             border-top: 1px solid rgba(255,255,255,0.05); 
             padding-top: 30px; 
@@ -303,7 +328,7 @@
             filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.4));
         }
         .zela-logo-img {
-            height: 50px; /* Exact size requested */
+            height: 50px;
             width: auto;
             display: block;
         }
@@ -330,6 +355,7 @@
             .gallery-grid { grid-template-columns: repeat(3, 1fr); }
             .about-grid { gap: 60px; }
             .services-grid { gap: 40px; }
+            .enquiry-wrapper { gap: 60px; }
         }
         
         @media (max-width: 992px) {
@@ -339,6 +365,8 @@
             .gallery-grid { grid-template-columns: repeat(3, 1fr); }
             .reviews-grid { grid-template-columns: 1fr; gap: 60px; }
             .footer-grid { grid-template-columns: 1fr 1fr; gap: 60px; }
+            
+            .enquiry-wrapper { grid-template-columns: 1fr; gap: 50px; text-align: center; }
         }
 
         @media (max-width: 768px) {
@@ -368,7 +396,7 @@
             
             /* Mobile Footer Stack */
             .footer-bottom {
-                flex-direction: column-reverse; /* Puts copyright below the logo */
+                flex-direction: column-reverse;
                 gap: 20px;
                 text-align: center;
             }
@@ -391,7 +419,7 @@
                 <a href="#about" onclick="toggleMenu()">About</a>
                 <a href="#services" onclick="toggleMenu()">Services</a>
                 <a href="#gallery" onclick="toggleMenu()">Gallery</a>
-                <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+                <a href="#enquiry" onclick="toggleMenu()">Enquire</a>
                 <a href="#booking" class="btn-nav" onclick="toggleMenu()">Book Now</a>
             </nav>
         </div>
@@ -576,6 +604,39 @@
         </div>
     </section>
 
+    <!-- NEW: Enquiry Section -->
+    <section id="enquiry" class="section-padding enquiry">
+        <div class="container">
+            <div class="enquiry-wrapper">
+                <div class="enquiry-text">
+                    <span class="section-subtitle">Consultation</span>
+                    <h2>Have a Question?</h2>
+                    <p>Not ready to book just yet? Enquire about our pricing, hair requirements, or specific styles. Our experts are here to guide you and provide a personalized quote.</p>
+                    <p>Send us a message and we will get back to you promptly.</p>
+                </div>
+                <div class="enquiry-form">
+                    <form id="enquiryForm" onsubmit="sendEnquiry(event)">
+                        <div class="form-group">
+                            <label for="enq-name">Your Name</label>
+                            <input type="text" id="enq-name" class="form-control" required placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="enq-phone">Phone Number</label>
+                            <input type="tel" id="enq-phone" class="form-control" required placeholder="+263 77 123 4567">
+                        </div>
+                        <div class="form-group">
+                            <label for="enq-message">Your Enquiry / Question</label>
+                            <textarea id="enq-message" class="form-control" rows="3" required placeholder="e.g., How much do you charge for medium box braids?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-enquiry">
+                            <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Send Enquiry via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Booking -->
     <section id="booking" class="section-padding booking">
         <div class="container">
@@ -728,7 +789,7 @@
             document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // WhatsApp Integration
+        // WhatsApp Integration - Booking
         function sendToWhatsApp(event) {
             event.preventDefault();
             
@@ -750,6 +811,25 @@
             
             if(notes) { message += `*Notes:* ${notes}\n`; }
             message += `\nHello Styles Hair Salon, I would like to confirm this appointment.`;
+
+            window.open(`https://wa.me/${targetPhone}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // WhatsApp Integration - Enquiry
+        function sendEnquiry(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('enq-name').value;
+            const phone = document.getElementById('enq-phone').value;
+            const msg = document.getElementById('enq-message').value;
+
+            const targetPhone = "263716910191"; 
+
+            let message = `*NEW PRICE ENQUIRY*\n\n`;
+            message += `*Name:* ${name}\n`;
+            message += `*Phone:* ${phone}\n`;
+            message += `*Enquiry Details:* ${msg}\n`;
+            message += `\nHello Styles Hair Salon, could you please assist me with this enquiry?`;
 
             window.open(`https://wa.me/${targetPhone}?text=${encodeURIComponent(message)}`, '_blank');
         }
