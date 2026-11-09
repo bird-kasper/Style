@@ -14,30 +14,26 @@
     <meta name="author" content="Styles Hair Salon">
     <link rel="canonical" href="https://www.styleshairsalonbulawayo.com/">
 
-    <!-- Open Graph / Social Media (Uses fav.png as requested) -->
+    <!-- Open Graph / Social Media (Uses logo.png as requested) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.styleshairsalonbulawayo.com/">
     <meta property="og:title" content="Styles Hair Salon | We Make You Feel Royal">
     <meta property="og:description" content="Award-winning salon backed by industry-experienced beauty experts. Haircuts, blow-dries, Nails.">
-    <meta property="og:image" content="fav.png">
+    <meta property="og:image" content="logo.png">
     
     <!-- Twitter Card (For X/Twitter sharing) -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Styles Hair Salon | We Make You Feel Royal">
     <meta name="twitter:description" content="Award-winning salon backed by industry-experienced beauty experts.">
-    <meta name="twitter:image" content="fav.png">
+    <meta name="twitter:image" content="logo.png">
 
-    <!-- Preconnect for Performance -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Google Fonts (Optimized for Speed) -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome (Async Loading so it doesn't block rendering) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- JSON-LD Schema for Local Business (SEO) -->
     <script type="application/ld+json">
@@ -45,7 +41,7 @@
       "@context": "https://schema.org",
       "@type": "HairSalon",
       "name": "Styles Hair Salon",
-      "image": "fav.png",
+      "image": "logo.png",
       "url": "https://www.styleshairsalonbulawayo.com/",
       "telephone": "+263716910191",
       "email": "lakoffinvestments@gmail.com",
@@ -98,17 +94,11 @@
         a { text-decoration: none; color: inherit; transition: all 0.4s var(--ease); }
         ul { list-style: none; }
 
-        /* Editorial Utilities & Speed Optimization */
+        /* Editorial Utilities */
         .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 40px; }
-        
-        /* Content-Visibility makes off-screen content load faster */
-        .section-padding { 
-            padding: 160px 0; 
-            content-visibility: auto; 
-            contain-intrinsic-size: 1px 1000px; 
-        }
-        
+        .section-padding { padding: 160px 0; }
         .text-center { text-align: center; }
+        
         .section-title { font-size: 3rem; margin-bottom: 20px; letter-spacing: 2px; }
         .section-subtitle { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--accent-gold); font-weight: 500; display: block; margin-bottom: 15px; }
         
@@ -232,13 +222,13 @@
         .gallery { background-color: var(--bg-light); }
         .gallery-grid { 
             display: grid; 
-            grid-template-columns: repeat(4, 1fr); 
+            grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
             gap: 20px; 
             margin-top: 70px; 
         }
         .gallery-item { 
             position: relative; 
-            aspect-ratio: 1 / 1; 
+            aspect-ratio: 1 / 1; /* Forces perfect squares */
             overflow: hidden; 
             background-color: #f4f4f4;
             cursor: pointer;
@@ -246,7 +236,7 @@
         .gallery-item img { 
             width: 100%; 
             height: 100%; 
-            object-fit: cover; 
+            object-fit: cover; /* Ensures images fill the square without stretching */
             display: block;
             transition: transform 0.8s var(--ease); 
         }
@@ -296,7 +286,7 @@
         .social-links a { width: auto; height: auto; background: none; color: #fff; font-size: 1.4rem; }
         .social-links a:hover { color: var(--accent-gold); transform: translateY(-3px); }
         
-        /* --- FOOTER BOTTOM --- */
+        /* --- FOOTER BOTTOM (Built.png Left, Copyright Right) --- */
         .footer-bottom { 
             border-top: 1px solid rgba(255,255,255,0.05); 
             padding-top: 30px; 
@@ -313,7 +303,7 @@
             filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.4));
         }
         .zela-logo-img {
-            height: 50px; 
+            height: 50px; /* Exact size requested */
             width: auto;
             display: block;
         }
@@ -378,7 +368,7 @@
             
             /* Mobile Footer Stack */
             .footer-bottom {
-                flex-direction: column-reverse; 
+                flex-direction: column-reverse; /* Puts copyright below the logo */
                 gap: 20px;
                 text-align: center;
             }
@@ -391,7 +381,7 @@
     <header id="header">
         <div class="container nav-wrapper">
             <a href="#" class="logo">
-                <img src="logo.png" alt="Styles Hair Salon Logo" width="85" height="85">
+                <img src="logo.png" alt="Styles Hair Salon Logo">
             </a>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -422,7 +412,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="banner.jpg" alt="Styles Hair Salon Experience" loading="lazy" decoding="async">
+                    <img src="banner.jpg" alt="Styles Hair Salon Experience">
                 </div>
                 <div class="about-text">
                     <span class="section-subtitle">Our Story</span>
@@ -519,40 +509,40 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="1.jpg" alt="Styles Hair Salon Portfolio 1" loading="lazy" decoding="async">
+                    <img src="1.jpg" alt="Styles Hair Salon Portfolio 1" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="2.jpg" alt="Styles Hair Salon Portfolio 2" loading="lazy" decoding="async">
+                    <img src="2.jpg" alt="Styles Hair Salon Portfolio 2" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="3.jpg" alt="Styles Hair Salon Portfolio 3" loading="lazy" decoding="async">
+                    <img src="3.jpg" alt="Styles Hair Salon Portfolio 3" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="4.jpg" alt="Styles Hair Salon Portfolio 4" loading="lazy" decoding="async">
+                    <img src="4.jpg" alt="Styles Hair Salon Portfolio 4" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="5.jpg" alt="Styles Hair Salon Portfolio 5" loading="lazy" decoding="async">
+                    <img src="5.jpg" alt="Styles Hair Salon Portfolio 5" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="6.jpg" alt="Styles Hair Salon Portfolio 6" loading="lazy" decoding="async">
+                    <img src="6.jpg" alt="Styles Hair Salon Portfolio 6" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="7.jpg" alt="Styles Hair Salon Portfolio 7" loading="lazy" decoding="async">
+                    <img src="7.jpg" alt="Styles Hair Salon Portfolio 7" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="8.jpg" alt="Styles Hair Salon Portfolio 8" loading="lazy" decoding="async">
+                    <img src="8.jpg" alt="Styles Hair Salon Portfolio 8" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="9.jpg" alt="Styles Hair Salon Portfolio 9" loading="lazy" decoding="async">
+                    <img src="9.jpg" alt="Styles Hair Salon Portfolio 9" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="10.jpg" alt="Styles Hair Salon Portfolio 10" loading="lazy" decoding="async">
+                    <img src="10.jpg" alt="Styles Hair Salon Portfolio 10" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="11.jpg" alt="Styles Hair Salon Portfolio 11" loading="lazy" decoding="async">
+                    <img src="11.jpg" alt="Styles Hair Salon Portfolio 11" loading="lazy">
                 </div>
                 <div class="gallery-item">
-                    <img src="12.jpg" alt="Styles Hair Salon Portfolio 12" loading="lazy" decoding="async">
+                    <img src="12.jpg" alt="Styles Hair Salon Portfolio 12" loading="lazy">
                 </div>
             </div>
         </div>
@@ -681,7 +671,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="logo.png" alt="Styles Hair Salon" class="footer-logo" loading="lazy" decoding="async">
+                    <img src="logo.png" alt="Styles Hair Salon" class="footer-logo">
                     <p>An award-winning salon backed by industry-experienced beauty experts. Dedicated to making you feel royal.</p>
                     <div class="social-links">
                         <a href="https://www.facebook.com/Styleshairsalonbulawayo" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -706,7 +696,7 @@
             <div class="footer-bottom">
                 <!-- Built by Zela on the left -->
                 <a href="https://www.facebook.com/Styleshairsalonbulawayo" target="_blank" class="zela-badge-link" title="Built by Zela Agency">
-                    <img src="built.png" alt="Zela Agency" class="zela-logo-img" loading="lazy" decoding="async">
+                    <img src="built.png" alt="Zela Agency" class="zela-logo-img">
                 </a>
                 
                 <!-- Copyright on the right -->
