@@ -122,9 +122,9 @@
         .logo img { height: 85px; transition: all 0.6s var(--ease); filter: drop-shadow(0 0 10px rgba(255,255,255,0.1)); }
         header.scrolled .logo img { height: 65px; }
         
-        .nav-links { display: flex; align-items: center; gap: 35px; }
+        .nav-links { display: flex; align-items: center; gap: 30px; }
         .nav-links a { 
-            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.25em; 
+            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.2em; 
             color: var(--text-light); position: relative; font-weight: 400;
         }
         .nav-links a::after { 
@@ -132,7 +132,7 @@
             background-color: var(--accent-gold); transition: width 0.4s var(--ease); 
         }
         .nav-links a:hover::after { width: 100%; }
-        .nav-links .btn-nav { color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 14px 35px; font-weight: 500; }
+        .nav-links .btn-nav { color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 14px 30px; font-weight: 500; }
         .nav-links .btn-nav:hover { background-color: var(--accent-gold); color: var(--bg-dark); }
         .nav-links .btn-nav::after { display: none; }
         
@@ -226,8 +226,7 @@
         .form-control { 
             width: 100%; padding: 15px 0; border: none; border-bottom: 1px solid #ccc; 
             background: transparent; font-family: var(--font-body); font-size: 1.05rem; color: var(--text-dark); 
-            transition: all 0.4s var(--ease); border-radius: 0;
-            min-height: 48px; /* Mobile friendly tap */
+            transition: all 0.4s var(--ease); border-radius: 0; min-height: 48px;
         }
         .form-control:focus { outline: none; border-bottom-color: var(--accent-gold); }
         .form-control::placeholder { color: #bbb; font-size: 0.95rem; }
@@ -253,6 +252,63 @@
             min-height: 65px; margin-top: 20px;
         }
         .btn-submit:hover { background-color: var(--accent-gold); border-color: var(--accent-gold); color: var(--bg-dark); }
+
+        /* --- LOCATION & GOOGLE MAPS --- */
+        .location { background-color: var(--bg-light); padding-bottom: 120px; }
+        .location-grid { 
+            display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: center; 
+            max-width: 1200px; margin: 0 auto;
+        }
+        .location-info h2 { font-size: 3rem; margin-bottom: 30px; color: var(--bg-dark); }
+        .location-info .info-item { margin-bottom: 30px; }
+        .location-info .info-item span { font-size: 1.05rem; line-height: 1.8; }
+        
+        /* Directions Button */
+        .btn-directions {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: var(--bg-dark);
+            color: #fff;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: var(--ease);
+        }
+        .btn-directions:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-dark);
+        }
+
+        /* Map Container */
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-color: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
+            filter: grayscale(10%) contrast(105%); /* Very subtle filter, keeps it readable */
+        }
+        /* Gold frame effect on map */
+        .map-frame {
+            position: relative;
+        }
+        .map-frame::before {
+            content: ''; position: absolute; top: -15px; left: -15px; right: 15px; bottom: 15px;
+            border: 2px solid var(--accent-gold); z-index: 1; pointer-events: none; border-radius: 8px;
+        }
 
         /* Footer */
         footer { background-color: var(--bg-dark); color: #fff; padding: 100px 0 40px; border-top: 1px solid rgba(197, 160, 89, 0.2); }
@@ -295,6 +351,7 @@
             .about-grid { gap: 60px; }
             .services-grid { gap: 40px; }
             .enquiry-wrapper { gap: 60px; }
+            .location-grid { gap: 50px; }
             .container { padding: 0 30px; }
         }
         
@@ -308,6 +365,9 @@
             .footer-grid { grid-template-columns: 1fr 1fr; gap: 50px; }
             .enquiry-wrapper { grid-template-columns: 1fr; gap: 50px; text-align: center; }
             .enquiry-text h2 { font-size: 2.5rem; }
+            .location-grid { grid-template-columns: 1fr; gap: 50px; text-align: center; }
+            .map-frame::before { display: none; }
+            .map-container { height: 400px; }
         }
 
         @media (max-width: 768px) {
@@ -371,6 +431,11 @@
             /* --- Booking --- */
             .booking-form .form-row { grid-template-columns: 1fr; gap: 0; }
             .btn-submit { padding: 20px; font-size: 0.75rem; min-height: 60px; }
+
+            /* --- Location --- */
+            .location-info h2 { font-size: 2.2rem; }
+            .map-container { height: 350px; }
+            .btn-directions { justify-content: center; width: 100%; }
             
             /* --- Footer --- */
             footer { padding: 70px 0 30px; }
@@ -392,9 +457,11 @@
             .section-title { font-size: 1.7rem; }
             .about-text h2 { font-size: 1.9rem; }
             .enquiry-text h2 { font-size: 1.7rem; }
+            .location-info h2 { font-size: 1.9rem; }
             .btn { padding: 14px 28px; font-size: 0.65rem; }
             .logo img { height: 50px; }
             header.scrolled .logo img { height: 40px; }
+            .map-container { height: 300px; }
         }
     </style>
 </head>
@@ -418,6 +485,7 @@
                 <a href="#services" onclick="toggleMenu()">Services</a>
                 <a href="#gallery" onclick="toggleMenu()">Gallery</a>
                 <a href="#enquiry" onclick="toggleMenu()">Enquire</a>
+                <a href="#location" onclick="toggleMenu()">Location</a>
                 <a href="#booking" class="btn-nav" onclick="toggleMenu()">Book Now</a>
             </nav>
         </div>
@@ -697,6 +765,46 @@
                         <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Confirm via WhatsApp
                     </button>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION & MAP -->
+    <section id="location" class="section-padding location">
+        <div class="container">
+            <div class="location-grid">
+                <div class="location-info">
+                    <span class="section-subtitle">Find Us</span>
+                    <h2>Visit Our Salon</h2>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>72 Josiah Tongogara Street,<br>Between 7th and 6th Avenue,<br>Bulawayo, Zimbabwe</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon - Sat: 7:00 AM - 7:00 PM</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>071 691 0191</span>
+                    </div>
+                    
+                    <!-- Direct Link to Google Maps Navigation using Intersection -->
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Josiah+Tongogara+Street+%26+7th+Avenue,+Bulawayo,+Zimbabwe" target="_blank" class="btn-directions">
+                        <i class="fas fa-location-arrow"></i> Get Directions
+                    </a>
+                </div>
+                <div class="map-frame">
+                    <div class="map-container">
+                        <!-- FIXED: Using exact intersection for accurate pin drop -->
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Josiah+Tongogara+Street+%26+7th+Avenue,+Bulawayo,+Zimbabwe&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
