@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styles Hair Salon | Bulawayo's Premier Luxury Beauty Destination</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="fav.png">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience the royal treatment at Styles Hair Salon in Bulawayo. Award-winning experts in haircuts, blow-dries, braids, nails, and makeup. Book your appointment today.">
+    <meta name="keywords" content="Hair Salon Bulawayo, Braids Bulawayo, Nails Bulawayo, Makeup Artist Bulawayo, Styles Hair Salon, Wig Installation Bulawayo, Barbering Bulawayo">
+    <meta name="author" content="Styles Hair Salon">
+    <link rel="canonical" href="https://www.styleshairsalonbulawayo.com/">
+
+    <!-- Open Graph / Social Media (Uses fav.png as requested) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.styleshairsalonbulawayo.com/">
+    <meta property="og:title" content="Styles Hair Salon | We Make You Feel Royal">
+    <meta property="og:description" content="Award-winning salon backed by industry-experienced beauty experts. Haircuts, blow-dries, Nails.">
+    <meta property="og:image" content="fav.png">
+    
+    <!-- Twitter Card (For X/Twitter sharing) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Styles Hair Salon | We Make You Feel Royal">
+    <meta name="twitter:description" content="Award-winning salon backed by industry-experienced beauty experts.">
+    <meta name="twitter:image" content="fav.png">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Google Fonts (Optimized for Speed) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome (Async Loading so it doesn't block rendering) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- JSON-LD Schema for Local Business (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "Styles Hair Salon",
+      "image": "fav.png",
+      "url": "https://www.styleshairsalonbulawayo.com/",
+      "telephone": "+263716910191",
+      "email": "lakoffinvestments@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "72 Josiah Tongogara Street, Between 7th and 6th Avenue",
+        "addressLocality": "Bulawayo",
+        "addressCountry": "ZW"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/Styleshairsalonbulawayo"
+      ]
+    }
+    </script>
+
+    <style>
+        /* LUXURY DESIGN SYSTEM */
+        :root {
+            --bg-dark: #0a0510; /* Deep, rich violet-black */
+            --bg-light: #ffffff; /* Pure white */
+            --accent-gold: #c5a059; /* Muted champagne gold */
+            --text-dark: #1a1a1a;
+            --text-light: #f5f5f5;
+            --text-muted: #888888;
+            --font-heading: 'Cinzel', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --ease: cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* Reset & Global */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: var(--font-body); 
+            color: var(--text-dark); 
+            background-color: var(--bg-light); 
+            line-height: 1.8; 
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; }
+        a { text-decoration: none; color: inherit; transition: all 0.4s var(--ease); }
+        ul { list-style: none; }
+
+        /* Editorial Utilities & Speed Optimization */
+        .container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        
+        /* Content-Visibility makes off-screen content load faster */
+        .section-padding { 
+            padding: 160px 0; 
+            content-visibility: auto; 
+            contain-intrinsic-size: 1px 1000px; 
+        }
+        
+        .text-center { text-align: center; }
+        .section-title { font-size: 3rem; margin-bottom: 20px; letter-spacing: 2px; }
+        .section-subtitle { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--accent-gold); font-weight: 500; display: block; margin-bottom: 15px; }
+        
+        /* Refined Buttons */
+        .btn { 
+            display: inline-block; 
+            padding: 18px 45px; 
+            font-size: 0.75rem; 
+            font-weight: 500; 
+            letter-spacing: 0.2em; 
+            text-transform: uppercase; 
+            border: 1px solid var(--accent-gold); 
+            color: var(--accent-gold); 
+            background: transparent;
+            cursor: pointer; 
+            transition: all 0.5s var(--ease); 
+        }
+        .btn:hover { 
+            background-color: var(--accent-gold); 
+            color: var(--bg-dark); 
+        }
+
+        /* Header */
+        header { 
+            position: fixed; 
+            top: 0; 
+            left: 0; width: 100%; 
+            z-index: 1000; 
+            padding: 25px 0; 
+            transition: all 0.4s var(--ease);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        header.scrolled { 
+            background: rgba(10, 5, 16, 0.98); 
+            padding: 15px 0; 
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            backdrop-filter: blur(15px);
+        }
+        .nav-wrapper { display: flex; justify-content: space-between; align-items: center; }
+        
+        /* BIGGER LOGO */
+        .logo img { 
+            height: 85px; 
+            transition: all 0.6s var(--ease); 
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.1));
+        }
+        header.scrolled .logo img { height: 65px; }
+        
+        .nav-links { display: flex; align-items: center; gap: 45px; }
+        .nav-links a { 
+            font-size: 0.75rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.25em; 
+            color: var(--text-light); 
+            position: relative; 
+            font-weight: 400;
+        }
+        .nav-links a::after { 
+            content: ''; position: absolute; bottom: -8px; left: 0; width: 0; height: 1px; 
+            background-color: var(--accent-gold); transition: width 0.4s var(--ease); 
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-links .btn-nav { color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 14px 35px; font-weight: 500; }
+        .nav-links .btn-nav:hover { background-color: var(--accent-gold); color: var(--bg-dark); }
+        .nav-links .btn-nav::after { display: none; }
+        
+        .menu-toggle { display: none; font-size: 1.8rem; color: #fff; cursor: pointer; }
+
+        /* Hero */
+        .hero { 
+            height: 100vh; min-height: 800px; 
+            background: var(--bg-dark); 
+            display: flex; align-items: center; justify-content: center; text-align: center; 
+            position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at center, rgba(61, 27, 78, 0.5) 0%, rgba(10, 5, 16, 1) 75%);
+            z-index: 1;
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 1000px; padding: 0 20px; }
+        .hero h1 { font-size: 5rem; color: #fff; line-height: 1.1; margin-bottom: 35px; }
+        .hero h1 span { color: var(--accent-gold); font-style: italic; }
+        .hero p { color: var(--text-light); font-size: 1.1rem; font-weight: 300; letter-spacing: 0.1em; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+        /* About - Editorial Layout */
+        .about { background-color: var(--bg-light); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 120px; align-items: center; }
+        .about-image { position: relative; }
+        .about-image img { width: 100%; height: auto; object-fit: cover; display: block; filter: grayscale(10%) contrast(105%); }
+        .about-image::after { 
+            content: ''; position: absolute; top: 25px; left: 25px; right: -25px; bottom: -25px; 
+            border: 1px solid var(--accent-gold); z-index: -1; 
+        }
+        .about-text h2 { font-size: 3.2rem; margin-bottom: 40px; color: var(--bg-dark); }
+        .about-text p { color: var(--text-muted); margin-bottom: 30px; font-size: 1.05rem; line-height: 2; }
+        .about-quote { font-family: var(--font-heading); font-size: 1.8rem; color: var(--accent-gold); font-style: italic; margin-top: 50px; border-left: 2px solid var(--accent-gold); padding-left: 30px; }
+        
+        .info-list { margin-top: 50px; display: flex; flex-direction: column; gap: 25px; }
+        .info-item { display: flex; align-items: flex-start; gap: 25px; }
+        .info-item i { color: var(--accent-gold); font-size: 1.2rem; margin-top: 6px; }
+        .info-item span { font-size: 0.95rem; color: var(--text-dark); letter-spacing: 0.05em; line-height: 1.8; }
+
+        /* Services - Minimalist Menu */
+        .services { background-color: var(--bg-dark); color: var(--text-light); }
+        .services .section-title { color: #fff; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 80px; margin-top: 80px; }
+        .service-col h3 { 
+            color: var(--accent-gold); font-size: 1.3rem; margin-bottom: 35px; 
+            letter-spacing: 2px; text-transform: uppercase; font-family: var(--font-body); font-weight: 400;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3); padding-bottom: 20px;
+        }
+        .service-list li { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 15px 0; font-size: 0.95rem; color: #ccc; letter-spacing: 0.05em;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .service-list li:last-child { border-bottom: none; }
+
+        /* GALLERY - CLEAN & PERFECTLY ALIGNED */
+        .gallery { background-color: var(--bg-light); }
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; 
+            margin-top: 70px; 
+        }
+        .gallery-item { 
+            position: relative; 
+            aspect-ratio: 1 / 1; 
+            overflow: hidden; 
+            background-color: #f4f4f4;
+            cursor: pointer;
+        }
+        .gallery-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+            transition: transform 0.8s var(--ease); 
+        }
+        .gallery-item:hover img { 
+            transform: scale(1.05); 
+        }
+
+        /* Reviews - Editorial Quotes */
+        .reviews { background-color: #fafafa; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; margin-top: 70px; }
+        .review-item { text-align: center; padding: 0 20px; }
+        .review-stars { color: var(--accent-gold); font-size: 0.9rem; margin-bottom: 30px; letter-spacing: 5px; }
+        .review-text { font-family: var(--font-heading); font-size: 1.5rem; color: var(--bg-dark); line-height: 1.6; margin-bottom: 30px; font-style: italic; }
+        .review-author { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 500; color: var(--accent-gold); }
+
+        /* Booking - Concierge Style */
+        .booking { background-color: var(--bg-light); }
+        .booking-container { max-width: 1000px; margin: 0 auto; margin-top: 70px; }
+        .booking-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 50px; }
+        .form-group { position: relative; }
+        .form-group label { 
+            display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; 
+            color: var(--text-muted); margin-bottom: 15px; font-weight: 500;
+        }
+        .form-control { 
+            width: 100%; padding: 15px 0; border: none; border-bottom: 1px solid #ccc; 
+            background: transparent; font-family: var(--font-body); font-size: 1.05rem; color: var(--text-dark); 
+            transition: all 0.4s var(--ease); border-radius: 0;
+        }
+        .form-control:focus { outline: none; border-bottom-color: var(--accent-gold); }
+        .form-control::placeholder { color: #bbb; font-size: 0.95rem; }
+        .btn-submit { 
+            width: 100%; background-color: var(--bg-dark); color: #fff; border: 1px solid var(--bg-dark); 
+            padding: 25px; font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.2em; 
+            cursor: pointer; transition: all 0.5s var(--ease); display: flex; align-items: center; justify-content: center; gap: 15px;
+        }
+        .btn-submit:hover { background-color: var(--accent-gold); border-color: var(--accent-gold); color: var(--bg-dark); }
+
+        /* Footer */
+        footer { background-color: var(--bg-dark); color: #fff; padding: 100px 0 40px; border-top: 1px solid rgba(197, 160, 89, 0.2); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 100px; margin-bottom: 60px; }
+        .footer-col h4 { color: var(--accent-gold); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 35px; font-family: var(--font-body); font-weight: 500; }
+        .footer-col p, .footer-col a { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 18px; display: block; letter-spacing: 0.05em; }
+        .footer-col a:hover { color: var(--accent-gold); }
+        .footer-logo { height: 70px; margin-bottom: 30px; }
+        .social-links { display: flex; gap: 25px; margin-top: 35px; }
+        .social-links a { width: auto; height: auto; background: none; color: #fff; font-size: 1.4rem; }
+        .social-links a:hover { color: var(--accent-gold); transform: translateY(-3px); }
+        
+        /* --- FOOTER BOTTOM --- */
+        .footer-bottom { 
+            border-top: 1px solid rgba(255,255,255,0.05); 
+            padding-top: 30px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .zela-badge-link {
+            display: inline-flex;
+            transition: var(--ease);
+        }
+        .zela-badge-link:hover {
+            transform: translateY(-3px);
+            filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.4));
+        }
+        .zela-logo-img {
+            height: 50px; 
+            width: auto;
+            display: block;
+        }
+        .footer-bottom p {
+            font-size: 0.7rem; 
+            letter-spacing: 0.1em; 
+            color: rgba(255,255,255,0.3); 
+            margin: 0;
+        }
+
+        /* Floating Actions - Minimalist */
+        .floating-actions { position: fixed; bottom: 40px; right: 40px; display: flex; flex-direction: column; gap: 15px; z-index: 1000; }
+        .float-btn { 
+            width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+            font-size: 1.3rem; color: #fff; transition: all 0.4s var(--ease); box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .float-btn:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.25); }
+        .float-wa { background-color: var(--bg-dark); border: 1px solid var(--accent-gold); color: var(--accent-gold); }
+        .float-wa:hover { background-color: var(--accent-gold); color: var(--bg-dark); }
+        .float-call { background-color: var(--accent-gold); color: var(--bg-dark); }
+
+        /* RESPONSIVE ALIGNMENT */
+        @media (max-width: 1200px) {
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+            .about-grid { gap: 60px; }
+            .services-grid { gap: 40px; }
+        }
+        
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 3.8rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 80px; }
+            .about-image::after { display: none; }
+            .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+            .reviews-grid { grid-template-columns: 1fr; gap: 60px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 60px; }
+        }
+
+        @media (max-width: 768px) {
+            .section-padding { padding: 100px 0; }
+            .section-title { font-size: 2.5rem; }
+            .logo img { height: 65px; }
+            header.scrolled .logo img { height: 50px; }
+            
+            .menu-toggle { display: block; }
+            .nav-links { 
+                position: fixed; top: 0; right: -100%; width: 100%; height: 100vh; 
+                background: var(--bg-dark); flex-direction: column; justify-content: center; 
+                transition: right 0.6s var(--ease); gap: 40px;
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.1rem; }
+            
+            .hero h1 { font-size: 2.8rem; }
+            .hero p { font-size: 1rem; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            
+            .services-grid { grid-template-columns: 1fr; gap: 60px; }
+            .booking-form .form-row { grid-template-columns: 1fr; gap: 0; margin-bottom: 0; }
+            .booking-form .form-group { margin-bottom: 35px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 50px; }
+            .container { padding: 0 24px; }
+            
+            /* Mobile Footer Stack */
+            .footer-bottom {
+                flex-direction: column-reverse; 
+                gap: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Styles Hair Salon Logo" width="85" height="85">
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" onclick="toggleMenu()">Home</a>
+                <a href="#about" onclick="toggleMenu()">About</a>
+                <a href="#services" onclick="toggleMenu()">Services</a>
+                <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+                <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+                <a href="#booking" class="btn-nav" onclick="toggleMenu()">Book Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="section-subtitle">Bulawayo's Premier Beauty Destination</span>
+            <h1>Elevate Your Style.<br><span>Embrace Your Royalty.</span></h1>
+            <p>An award-winning salon backed by industry-experienced beauty experts. We don't just style hair; we craft an experience.</p>
+            <a href="#booking" class="btn">Reserve Your Visit</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-padding about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="banner.jpg" alt="Styles Hair Salon Experience" loading="lazy" decoding="async">
+                </div>
+                <div class="about-text">
+                    <span class="section-subtitle">Our Story</span>
+                    <h2>A Legacy of Elegance</h2>
+                    <p>Located in the heart of Bulawayo, Styles Hair Salon is dedicated to providing unparalleled hair, beauty, and nail services in a luxurious environment.</p>
+                    <p>Our team of industry-experienced experts is committed to excellence, ensuring that every visit leaves you feeling confident, rejuvenated, and undeniably royal.</p>
+                    
+                    <div class="about-quote">"We make you feel royal."</div>
+                    
+                    <div class="info-list">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>72 Josiah Tongogara Street, between 7th and 6th Avenue by Mdala Tours and Business Center, Bulawayo</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon - Sat: 7:00 AM - 7:00 PM</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>071 691 0191</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section-padding services">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">The Menu</span>
+                <h2 class="section-title">Professional Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-col">
+                    <h3>Hair & Styling</h3>
+                    <ul class="service-list">
+                        <li><span>Hairdresser</span></li>
+                        <li><span>Blowdry / Blow dry</span></li>
+                        <li><span>English cut</span></li>
+                        <li><span>Children's cuts</span></li>
+                        <li><span>Hairstyling</span></li>
+                        <li><span>Hair straightening</span></li>
+                        <li><span>Brazilian hair straightening</span></li>
+                        <li><span>Curly hair</span></li>
+                        <li><span>Hair colouring</span></li>
+                        <li><span>Ombre hair colour</span></li>
+                        <li><span>Hair glossing</span></li>
+                        <li><span>Hair regrowth</span></li>
+                    </ul>
+                </div>
+                <div class="service-col">
+                    <h3>Braids & Weaves</h3>
+                    <ul class="service-list">
+                        <li><span>Box braids</span></li>
+                        <li><span>Braids</span></li>
+                        <li><span>Twist braids</span></li>
+                        <li><span>Braiding</span></li>
+                        <li><span>Dreadlocks</span></li>
+                        <li><span>Hair extensions</span></li>
+                        <li><span>Short weave</span></li>
+                        <li><span>Wig installation</span></li>
+                        <li><span>Makeup and wig installation</span></li>
+                        <li><span>Updos</span></li>
+                    </ul>
+                </div>
+                <div class="service-col">
+                    <h3>Beauty & Gents</h3>
+                    <ul class="service-list">
+                        <li><span>Manicure</span></li>
+                        <li><span>Pedicure</span></li>
+                        <li><span>Gel up</span></li>
+                        <li><span>Make-up</span></li>
+                        <li><span>Cosmetics</span></li>
+                        <li><span>Laser hair removal</span></li>
+                        <li><span>Barbering</span></li>
+                        <li><span>Shaving</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery (Clean, No Overlays) -->
+    <section id="gallery" class="section-padding gallery">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">The Portfolio</span>
+                <h2 class="section-title">Our Masterpieces</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="1.jpg" alt="Styles Hair Salon Portfolio 1" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="2.jpg" alt="Styles Hair Salon Portfolio 2" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="3.jpg" alt="Styles Hair Salon Portfolio 3" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="4.jpg" alt="Styles Hair Salon Portfolio 4" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="5.jpg" alt="Styles Hair Salon Portfolio 5" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="6.jpg" alt="Styles Hair Salon Portfolio 6" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="7.jpg" alt="Styles Hair Salon Portfolio 7" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="8.jpg" alt="Styles Hair Salon Portfolio 8" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="9.jpg" alt="Styles Hair Salon Portfolio 9" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="10.jpg" alt="Styles Hair Salon Portfolio 10" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="11.jpg" alt="Styles Hair Salon Portfolio 11" loading="lazy" decoding="async">
+                </div>
+                <div class="gallery-item">
+                    <img src="12.jpg" alt="Styles Hair Salon Portfolio 12" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="section-padding reviews">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">Testimonials</span>
+                <h2 class="section-title">Client Satisfaction</h2>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-item">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"They are the best in the business."</p>
+                    <h4 class="review-author">Moreblessing Kwirirai</h4>
+                </div>
+                <div class="review-item">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"Absolutely love my braids and updo. The attention to detail is unmatched!"</p>
+                    <h4 class="review-author">Charmane Medzani</h4>
+                </div>
+                <div class="review-item">
+                    <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p class="review-text">"A truly premium experience every single time. Highly recommended."</p>
+                    <h4 class="review-author">LAKOFF INVESTMENTS</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking" class="section-padding booking">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">Reservations</span>
+                <h2 class="section-title">Book Your Visit</h2>
+            </div>
+            
+            <div class="booking-container">
+                <form id="whatsappForm" onsubmit="sendToWhatsApp(event)" class="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required placeholder="Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required placeholder="+263 77 123 4567">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="service">Select Service</label>
+                            <select id="service" class="form-control" required>
+                                <option value="" disabled selected>Choose a service...</option>
+                                <optgroup label="Hair & Styling">
+                                    <option value="Hairdresser">Hairdresser</option>
+                                    <option value="Blowdry">Blowdry / Blow dry</option>
+                                    <option value="English cut">English cut</option>
+                                    <option value="Hair colouring">Hair colouring / Ombre</option>
+                                    <option value="Brazilian hair straightening">Brazilian hair straightening</option>
+                                </optgroup>
+                                <optgroup label="Braids & Weaves">
+                                    <option value="Box braids">Box braids</option>
+                                    <option value="Twist braids">Twist braids</option>
+                                    <option value="Dreadlocks">Dreadlocks</option>
+                                    <option value="Wig installation">Wig installation</option>
+                                    <option value="Updos">Updos</option>
+                                </optgroup>
+                                <optgroup label="Nails & Beauty">
+                                    <option value="Manicure">Manicure</option>
+                                    <option value="Pedicure">Pedicure</option>
+                                    <option value="Gel up">Gel up</option>
+                                    <option value="Make-up">Make-up</option>
+                                </optgroup>
+                                <optgroup label="Gents">
+                                    <option value="Barbering">Barbering / Shaving</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="time">Preferred Time</label>
+                            <select id="time" class="form-control" required>
+                                <option value="" disabled selected>Select time...</option>
+                                <option value="07:00 AM">07:00 AM</option>
+                                <option value="08:00 AM">08:00 AM</option>
+                                <option value="09:00 AM">09:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="01:00 PM">01:00 PM</option>
+                                <option value="02:00 PM">02:00 PM</option>
+                                <option value="03:00 PM">03:00 PM</option>
+                                <option value="04:00 PM">04:00 PM</option>
+                                <option value="05:00 PM">05:00 PM</option>
+                                <option value="06:00 PM">06:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Additional Notes</label>
+                            <input type="text" id="notes" class="form-control" placeholder="Optional details...">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i> Confirm via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="logo.png" alt="Styles Hair Salon" class="footer-logo" loading="lazy" decoding="async">
+                    <p>An award-winning salon backed by industry-experienced beauty experts. Dedicated to making you feel royal.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Styleshairsalonbulawayo" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/messages/t/Styleshairsalonbulawayo/" target="_blank" aria-label="Messenger"><i class="fab fa-facebook-messenger"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <a href="tel:+263716910191">071 691 0191</a>
+                    <a href="mailto:lakoffinvestments@gmail.com">lakoffinvestments@gmail.com</a>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Visit Us</h4>
+                    <p>72 Josiah Tongogara Street,<br>Between 7th and 6th Avenue,<br>Bulawayo, Zimbabwe</p>
+                    <p style="margin-top: 20px;">Mon - Sat: 7:00 AM - 7:00 PM</p>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <!-- Built by Zela on the left -->
+                <a href="https://www.facebook.com/Styleshairsalonbulawayo" target="_blank" class="zela-badge-link" title="Built by Zela Agency">
+                    <img src="built.png" alt="Zela Agency" class="zela-logo-img" loading="lazy" decoding="async">
+                </a>
+                
+                <!-- Copyright on the right -->
+                <p>&copy; 2026 Styles Hair Salon Bulawayo. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions -->
+    <div class="floating-actions">
+        <a href="https://wa.me/263716910191" target="_blank" class="float-btn float-wa" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+263716910191" class="float-btn float-call" aria-label="Call">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+    </div>
+
+    <script>
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) { header.classList.add('scrolled'); } 
+            else { header.classList.remove('scrolled'); }
+        });
+
+        // Mobile Menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // WhatsApp Integration
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const notes = document.getElementById('notes').value;
+
+            const targetPhone = "263716910191"; 
+
+            let message = `*NEW BOOKING REQUEST*\n\n`;
+            message += `*Name:* ${name}\n`;
+            message += `*Phone:* ${phone}\n`;
+            message += `*Service:* ${service}\n`;
+            message += `*Date:* ${date}\n`;
+            message += `*Time:* ${time}\n`;
+            
+            if(notes) { message += `*Notes:* ${notes}\n`; }
+            message += `\nHello Styles Hair Salon, I would like to confirm this appointment.`;
+
+            window.open(`https://wa.me/${targetPhone}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // Set min date
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('date').setAttribute('min', today);
+    </script>
+</body>
+</html>
